@@ -1,3 +1,12 @@
+/* variables */
+
+:root {
+	--sm: 450px;
+	--md: 600px;
+	--lg: 800px;
+	--blue: rgb(56, 56, 125);
+}
+
 * {
 	box-sizing: border-box;
 	font-family: "Courier New", Courier, monospace;
@@ -19,6 +28,7 @@ html {
 
 /* header styles  */
 .header {
+	position: sticky;
 	background-color: aqua;
 	display: flex;
 	flex-direction: row;
@@ -39,9 +49,11 @@ html {
 }
 
 .logo-container .logo {
-	height: 15%;
+	height: 100%;
+	width: 100%;
+	min-width: 130px;
+	max-width: 250px;
 	background-color: red;
-	position: absolute;
 }
 
 .header-list li {
@@ -107,7 +119,7 @@ html {
 
 @media only screen and (min-width: 600px) {
 	section {
-		color: red;
+		color: var(--blue);
 	}
 }
 @media only screen and (min-width: 800px) {
@@ -118,6 +130,53 @@ html {
 
 /* main content style */
 
-section {
-	margin: 10%;
+main {
+}
+
+.video-container {
+	display: none;
+}
+
+#myVideo {
+	display: none;
+}
+
+.hero {
+	color: hsl(0, 0%, 95%);
+	padding: 20%;
+	background-image: url("/images/zapatillas-trail-running-race-light-2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-content {
+	background-color: rgba(0, 0, 0, 0.248);
+}
+
+@media only screen and (min-width: 800px) {
+	.hero {
+		background: none;
+		width: 100%;
+	}
+	.hero-content {
+		position: absolute;
+		margin: 20% 5%;
+	}
+	.video-container {
+		display: inline;
+		overflow: hidden;
+		max-height: 70vh;
+	}
+	#myVideo {
+		display: inline;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.footer {
+	background-color: aquamarine;
+	padding: auto;
+	margin: 5% auto;
 }
