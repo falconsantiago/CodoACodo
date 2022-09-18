@@ -9,3 +9,6 @@ function closeNav() {
 }
 
 // nav functions
+
+var vid = document.getElementById("myVideo");
+vid.playbackRate = 0.75;

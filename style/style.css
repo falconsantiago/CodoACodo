@@ -51,13 +51,35 @@ html {
 .logo-container .logo {
 	height: 100%;
 	width: 100%;
-	min-width: 130px;
-	max-width: 250px;
+
+	min-width: 40px;
+	max-width: 120px;
+
 	background-color: red;
+	position: relative;
 }
 
+@media only screen and (min-width: 600px) {
+	.logo-container .logo {
+		height: 100%;
+		width: 100%;
+		max-width: 150px;
+
+		background-color: yellow;
+	}
+}
 .header-list li {
-	margin: 10px;
+	display: none;
+}
+@media only screen and (min-width: 600px) {
+	.header-list ul {
+		display: flex;
+		margin: auto;
+	}
+
+	.header-list ul li {
+		margin: auto 10px;
+	}
 }
 
 .language span {
@@ -143,33 +165,39 @@ main {
 
 .hero {
 	color: hsl(0, 0%, 95%);
-	padding: 20%;
+	padding: 20% 0;
 	background-image: url("/images/zapatillas-trail-running-race-light-2.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
+.hero h1 {
+	color: #cfd466;
+	font-weight: 700;
+	font-size: 2rem;
+}
+
 .hero-content {
 	background-color: rgba(0, 0, 0, 0.248);
+	z-index: 1000;
 }
 
 @media only screen and (min-width: 800px) {
 	.hero {
 		background: none;
-		width: 100%;
+
+		padding: 0;
 	}
 	.hero-content {
 		position: absolute;
 		margin: 20% 5%;
 	}
 	.video-container {
-		display: inline;
-		overflow: hidden;
-		max-height: 70vh;
+		display: block;
 	}
 	#myVideo {
-		display: inline;
+		display: block;
 		height: 100%;
 		width: 100%;
 	}
