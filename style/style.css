@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+	font-family: "Courier New", Courier, monospace;
+}
+
+html {
+	background-color: blueviolet;
+}
+.margin-box {
+	display: flex;
+	flex-direction: row-reverse;
+
+	background-color: pink;
+}
+.socials {
+	width: 10%;
+	background-color: gray;
+}
+
+/* header styles  */
+.header {
+	background-color: aqua;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	/* min-height: 50px; */
+	max-height: 100px;
+}
+
+.header .header-items {
+	display: flex;
+	flex-direction: row;
+}
+
+.header .logo-container {
+	max-height: 100px;
+	height: 100%;
+}
+
+.logo-container .logo {
+	height: 15%;
+	background-color: red;
+	position: absolute;
+}
+
+.header-list li {
+	margin: 10px;
+}
+
+.language span {
+	margin: auto;
+	padding: 1%;
+}
+
+.hamb-container {
+	margin-right: 5%;
+}
+.hamb-container .hamb {
+	margin: auto;
+}
+/* header styles  */
+
+/* nav styles */
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: rgba(17, 17, 17, 0.418);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: rgb(243, 255, 73);
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	section {
+		color: red;
+	}
+}
+@media only screen and (min-width: 800px) {
+	section {
+		color: blueviolet;
+	}
+}
+
+/* main content style */
+
+section {
+	margin: 10%;
+}
