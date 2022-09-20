@@ -4,16 +4,28 @@
 	--sm: 450px;
 	--md: 600px;
 	--lg: 800px;
-	--blue: rgb(56, 56, 125);
+
+	--yellow1: #cfd466;
+	--yellow2: #fff01f;
+	--yellow3: #fdf800;
+	--neonyellow: #ffff33;
+	--greyblueD: #669999;
+	--greyblue1: #7da4c0;
+	--greyblue2: #759daf;
+	--grayblue3: #6790b3;
+	--transparent: rgba(0, 0, 0, 0);
+	--transparentD: rgba(0, 0, 0, 0.25);
 }
 
 * {
 	box-sizing: border-box;
 	font-family: "Courier New", Courier, monospace;
+	font-family: "Titillium Web", sans-serif;
 }
 
 html {
 	background-color: blueviolet;
+	font-family: "Titillium Web", sans-serif;
 }
 .margin-box {
 	display: flex;
@@ -22,20 +34,49 @@ html {
 	background-color: pink;
 }
 .socials {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 10%;
-	background-color: gray;
+	background-color: var(--greyblue1);
 }
+.top {
+	position: fixed;
+	bottom: 7%;
+	right: 3%;
 
+	width: 4rem;
+	height: 4rem;
+	background-color: var(--greyblueD);
+	border-radius: 200px;
+	box-shadow: none;
+	color: #fff;
+	border: none;
+}
 /* header styles  */
 .header {
+	color: white;
 	position: sticky;
-	background-color: aqua;
+	background-color: var(--greyblue1);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
 	/* min-height: 50px; */
-	max-height: 100px;
+	max-height: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+	.header {
+		max-height: 60px;
+		background-color: var(--greyblue1);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.header {
+		max-height: 80px;
+		background-color: var(--greyblue1);
+	}
 }
 
 .header .header-items {
@@ -55,8 +96,10 @@ html {
 	min-width: 40px;
 	max-width: 120px;
 
-	background-color: red;
+	background-color: var(--greyblue1);
 	position: relative;
+
+	margin: 5% 0 0 10%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -65,12 +108,24 @@ html {
 		width: 100%;
 		max-width: 150px;
 
-		background-color: yellow;
+		background-color: var(--greyblue2);
 	}
 }
+
+@media only screen and (min-width: 1200px) {
+	.logo-container .logo {
+		height: 100%;
+		width: 100%;
+		max-width: 150px;
+
+		background-color: var(--transparent);
+	}
+}
+
 .header-list li {
 	display: none;
 }
+
 @media only screen and (min-width: 600px) {
 	.header-list ul {
 		display: flex;
@@ -166,23 +221,27 @@ main {
 .hero {
 	color: hsl(0, 0%, 95%);
 	padding: 20% 0;
-	background-image: url("/images/zapatillas-trail-running-race-light-2.jpeg");
+	background: linear-gradient(var(--transparentD), var(--transparentD)),
+		url("/images/zapatillas-trail-running-race-light-2.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
+.hero-content {
+	z-index: 1000;
+	margin: 5%;
+}
+
 .hero h1 {
-	color: #cfd466;
+	color: var(--neonyellow);
 	font-weight: 700;
 	font-size: 2rem;
+	line-height: 2.4rem;
+	margin-bottom: 4%;
+	font-size: 3rem;
+	max-width: 90%;
 }
-
-.hero-content {
-	background-color: rgba(0, 0, 0, 0.248);
-	z-index: 1000;
-}
-
 @media only screen and (min-width: 800px) {
 	.hero {
 		background: none;
