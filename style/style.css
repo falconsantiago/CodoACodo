@@ -33,6 +33,7 @@ html {
 
 	background-color: pink;
 }
+/* side stripe styles */
 .socials {
 	display: flex;
 	flex-direction: column;
@@ -40,20 +41,20 @@ html {
 	width: 10%;
 	background-color: var(--greyblue1);
 }
-.top {
+.top-btn {
 	position: fixed;
 	bottom: 7%;
-	right: 3%;
+	right: 0%;
 
-	width: 4rem;
-	height: 4rem;
+	width: 3rem;
+	height: 3rem;
 	background-color: var(--greyblueD);
 	border-radius: 200px;
 	box-shadow: none;
 	color: #fff;
 	border: none;
 }
-/* header styles  */
+/* header style  */
 .header {
 	color: white;
 	position: sticky;
@@ -65,7 +66,7 @@ html {
 	max-height: 50px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
 	.header {
 		max-height: 60px;
 		background-color: var(--greyblue1);
@@ -76,12 +77,32 @@ html {
 	.header {
 		max-height: 80px;
 		background-color: var(--greyblue1);
+		font-size: 1.3rem;
 	}
 }
 
-.header .header-items {
+.header-items {
 	display: flex;
 	flex-direction: row;
+}
+
+.header .header-items.brand-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--greyblue2);
+	padding: 1% 1% 4%;
+	height: 100%;
+	margin: auto auto auto 10%;
+	border-radius: 0 0 80px 80px;
+}
+.header-items .brand {
+	background-color: var(--greyblue2);
+	max-width: 100px;
+	max-height: 100px;
+	position: relative;
+	display: inline-block;
+	margin-top: 15%;
 }
 
 .header .logo-container {
@@ -92,14 +113,15 @@ html {
 .logo-container .logo {
 	height: 100%;
 	width: 100%;
-
 	min-width: 40px;
-	max-width: 120px;
-
-	background-color: var(--greyblue1);
+	max-width: 100px;
+	clip-path: polygon(0 0, 80% 0%, 110% 100%, 0% 100%);
+	padding: 5% 5% 5% 0;
+	border-radius: 0 0 50px;
+	background-color: var(--greyblue2);
 	position: relative;
 
-	margin: 5% 0 0 10%;
+	/* margin: 5% 0 0 10%; */
 }
 
 @media only screen and (min-width: 600px) {
@@ -107,7 +129,6 @@ html {
 		height: 100%;
 		width: 100%;
 		max-width: 150px;
-
 		background-color: var(--greyblue2);
 	}
 }
@@ -116,9 +137,8 @@ html {
 	.logo-container .logo {
 		height: 100%;
 		width: 100%;
-		max-width: 150px;
-
-		background-color: var(--transparent);
+		border-radius: 0 0 80px;
+		max-width: 200px;
 	}
 }
 
@@ -194,17 +214,6 @@ html {
 	}
 }
 
-@media only screen and (min-width: 600px) {
-	section {
-		color: var(--blue);
-	}
-}
-@media only screen and (min-width: 800px) {
-	section {
-		color: blueviolet;
-	}
-}
-
 /* main content style */
 
 main {
@@ -226,11 +235,16 @@ main {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	line-height: 1.3rem;
 }
 
+.hero a {
+	color: var(--yellow2);
+	font-size: 1.2rem;
+}
 .hero-content {
 	z-index: 1000;
-	margin: 5%;
+	padding: 5%;
 }
 
 .hero h1 {
@@ -241,17 +255,67 @@ main {
 	margin-bottom: 4%;
 	font-size: 3rem;
 	max-width: 90%;
+	margin-top: 10%;
 }
-@media only screen and (min-width: 800px) {
+
+@media only screen and (min-width: 700px) {
+	.hero {
+		padding: 0;
+		line-height: 2rem;
+	}
+	.hero-content {
+		padding: 10% 5%;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		line-height: 3rem;
+		max-width: 65%;
+	}
+	.hero h3 {
+		font-size: 2rem;
+		line-height: 2.4rem;
+	}
+	.hero p {
+		font-size: 1.5rem;
+	}
+	.hero a {
+		font-size: 2.1rem;
+	}
+	.video-container {
+		display: none;
+	}
+	#myVideo {
+		display: none;
+		height: 100%;
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 1200px) {
 	.hero {
 		background: none;
 
-		padding: 0;
+		line-height: 2rem;
 	}
 	.hero-content {
+		padding: 0%;
 		position: absolute;
-		margin: 20% 5%;
+		margin: 3% 11% 25%;
 	}
+
+	.hero h1 {
+		font-size: 5rem;
+		line-height: 5rem;
+		max-width: 65%;
+	}
+	.hero h3 {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	.hero p {
+		font-size: 1.6rem;
+	}
+
 	.video-container {
 		display: block;
 	}
