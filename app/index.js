@@ -12,3 +12,18 @@ function closeNav() {
 
 var vid = document.getElementById("myVideo");
 vid.playbackRate = 0.75;
+
+let flag= false
+
+function openForm(){
+
+  
+let form=document.getElementById("form")
+if (flag===false){
+  form.style.height="auto"
+  flag=true
+} else if(flag===true){
+  form.style.height="0"
+  flag=false
+}
+}

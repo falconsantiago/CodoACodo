@@ -1,10 +1,6 @@
 /* variables */
 
 :root {
-	--sm: 450px;
-	--md: 600px;
-	--lg: 800px;
-
 	--yellow1: #cfd466;
 	--yellow2: #fff01f;
 	--yellow3: #fdf800;
@@ -24,27 +20,38 @@
 }
 
 html {
-	background-color: blueviolet;
+	background-color: var(--grayblue3);
 	font-family: "Titillium Web", sans-serif;
+	transition: 0.5s;
 }
 .margin-box {
 	display: flex;
 	flex-direction: row-reverse;
 
-	background-color: pink;
+	background-color: fafafa;
 }
 /* side stripe styles */
-.socials {
+.side-stripe {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 10%;
+	align-items: center;
+	width: 17%;
 	background-color: var(--greyblue1);
 }
+
+.hamb-container {
+	width: 100%;
+	padding: 10%;
+}
+.hamb {
+	color: #fff;
+	margin-top: 10%;
+	width: 100%;
+}
+
 .top-btn {
-	position: fixed;
-	bottom: 7%;
-	right: 0%;
+	bottom: 4%;
 
 	width: 3rem;
 	height: 3rem;
@@ -77,7 +84,7 @@ html {
 	.header {
 		max-height: 80px;
 		background-color: var(--greyblue1);
-		font-size: 1.3rem;
+		font-size: 1.9rem;
 	}
 }
 
@@ -86,7 +93,7 @@ html {
 	flex-direction: row;
 }
 
-.header .header-items.brand-container {
+.brand-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -94,23 +101,34 @@ html {
 	padding: 1% 1% 4%;
 	height: 100%;
 	margin: auto auto auto 10%;
-	border-radius: 0 0 80px 80px;
-}
-.header-items .brand {
-	background-color: var(--greyblue2);
-	max-width: 100px;
-	max-height: 100px;
-	position: relative;
-	display: inline-block;
-	margin-top: 15%;
+	border-radius: 0 0 100px 100px;
+	color: white;
+	text-decoration: none;
+	font-size: 0.9rem;
 }
 
-.header .logo-container {
+.brand {
+	width: 100%;
+	height: 100%;
+	background-color: var(--greyblue2);
+	width: 100%;
+	max-width: calc(9vw);
+	position: relative;
+	display: inline-block;
+	margin: 15% auto 1% auto;
+}
+@media screen and (min-width: 700px) {
+	.brand {
+		max-width: 7rem;
+	}
+}
+
+.logo-container {
 	max-height: 100px;
 	height: 100%;
 }
 
-.logo-container .logo {
+.logo {
 	height: 100%;
 	width: 100%;
 	min-width: 40px;
@@ -124,8 +142,8 @@ html {
 	/* margin: 5% 0 0 10%; */
 }
 
-@media only screen and (min-width: 600px) {
-	.logo-container .logo {
+@media only screen and (min-width: 700px) {
+	.logo {
 		height: 100%;
 		width: 100%;
 		max-width: 150px;
@@ -134,7 +152,7 @@ html {
 }
 
 @media only screen and (min-width: 1200px) {
-	.logo-container .logo {
+	.logo {
 		height: 100%;
 		width: 100%;
 		border-radius: 0 0 80px;
@@ -146,7 +164,7 @@ html {
 	display: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	.header-list ul {
 		display: flex;
 		margin: auto;
@@ -157,17 +175,21 @@ html {
 	}
 }
 
+.language {
+	margin-right: 3%;
+}
 .language span {
+	border: rgba(255, 255, 255, 0.5);
 	margin: auto;
 	padding: 1%;
+	font-size: 0.9rem;
+}
+@media screen and (min-width: 700px) {
+	.language spam {
+		font-size: 1.3rem;
+	}
 }
 
-.hamb-container {
-	margin-right: 5%;
-}
-.hamb-container .hamb {
-	margin: auto;
-}
 /* header styles  */
 
 /* nav styles */
@@ -216,9 +238,6 @@ html {
 
 /* main content style */
 
-main {
-}
-
 .video-container {
 	display: none;
 }
@@ -253,7 +272,7 @@ main {
 	font-size: 2rem;
 	line-height: 2.4rem;
 	margin-bottom: 4%;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	max-width: 90%;
 	margin-top: 10%;
 }
@@ -264,7 +283,7 @@ main {
 		line-height: 2rem;
 	}
 	.hero-content {
-		padding: 10% 5%;
+		/* padding: 10% 5%; */
 	}
 
 	.hero h1 {
@@ -292,6 +311,11 @@ main {
 	}
 }
 @media only screen and (min-width: 1200px) {
+	.hero-margin {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	.hero {
 		background: none;
 
@@ -300,30 +324,61 @@ main {
 	.hero-content {
 		padding: 0%;
 		position: absolute;
-		margin: 3% 11% 25%;
+		margin: 3% 3% 20%;
 	}
 
 	.hero h1 {
-		font-size: 5rem;
-		line-height: 5rem;
+		text-align: right;
+		font-size: 4rem;
+		line-height: 3rem;
 		max-width: 65%;
+		margin: 5% 5% 2% auto;
 	}
 	.hero h3 {
-		font-size: 3rem;
-		line-height: 3rem;
+		font-size: 2rem;
+		line-height: 2.5rem;
 	}
 	.hero p {
 		font-size: 1.6rem;
 	}
-
+	.hero-margin {
+		padding: 0 5% 0 0;
+		max-height: 650px;
+	}
 	.video-container {
-		display: block;
+		/* display: block; */
 	}
 	#myVideo {
 		display: block;
 		height: 100%;
-		width: 100%;
 	}
+}
+
+/* 
+FORM STYLES */
+
+.register-form {
+	background-color: #f1f1f1;
+}
+
+#form {
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.register-btn {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+	border: 0;
+	text-align: left;
+	padding: 2% 15%;
+	color: #fff;
+	background-color: var(--yellow1);
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 5%;
 }
 
 .footer {
