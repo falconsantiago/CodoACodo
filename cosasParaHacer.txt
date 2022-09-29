@@ -5,11 +5,12 @@ referencia:
  https://ultratrailharricana.com/en/?gclid=CjwKCAjwg5uZBhATEiwAhhRLHsS5UKckSC9F7zsIbiQ_UWOYNqslMT2R-UaxeNLf5mGfGeDlyCS5GRoC5P4QAvD_BwE
 
 
--agregar breakpoints/meadia querys al headery al especificamente al logo
 -agregar iconos a la parte de socials (barra lateral)
--agregar el form en la seccion correspondiente
--definir contenido de las demas secciones
--empezar a definir colores y tipografias 
+-agregar estylo y terminar el form
+refe de animacion del form 
+https://codepen.io/remilaudanski/pen/gbBGyN
 
-si se les ocurre algo mas avisen!
-con amor: Seba
+-definir contenido de las demas secciones
+
+
+

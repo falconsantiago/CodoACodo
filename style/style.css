@@ -17,42 +17,61 @@
 	box-sizing: border-box;
 	font-family: "Courier New", Courier, monospace;
 	font-family: "Titillium Web", sans-serif;
+	font-size: 1.5rem;
 }
 
 html {
-	background-color: var(--grayblue3);
 	font-family: "Titillium Web", sans-serif;
 	transition: 0.5s;
 }
+
 .margin-box {
 	display: flex;
 	flex-direction: row-reverse;
+}
 
-	background-color: fafafa;
+.hidden {
+	display: none;
+	height: 0;
 }
 /* side stripe styles */
 .side-stripe {
+	font-size: 2rem;
+	background-color: var(--greyblue1);
+	max-width: 100px;
+	color: #fff;
+	padding: 1%;
+}
+.side-stripe ul {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
-	width: 17%;
-	background-color: var(--greyblue1);
 }
-
+.side-stripe ul a i {
+	font-size: 2rem;
+	margin: 5% auto;
+	color: #fff;
+}
 .hamb-container {
-	width: 100%;
-	padding: 10%;
+	font-size: 2rem;
 }
 .hamb {
-	color: #fff;
-	margin-top: 10%;
-	width: 100%;
+	margin: 5%;
+	padding: 3%;
+	height: 50%;
+}
+@media screen and (min-width: 700px) {
+	.side-stripe {
+		font-size: 3rem;
+	}
+	.side-stripe ul a i {
+		font-size: 1rem;
+	}
 }
 
 .top-btn {
 	bottom: 4%;
-
+	position: fixed;
 	width: 3rem;
 	height: 3rem;
 	background-color: var(--greyblueD);
@@ -83,8 +102,9 @@ html {
 @media only screen and (min-width: 1200px) {
 	.header {
 		max-height: 80px;
-		background-color: var(--greyblue1);
+		background-color: var(--transparent);
 		font-size: 1.9rem;
+		margin-bottom: -80px;
 	}
 }
 
@@ -117,9 +137,15 @@ html {
 	display: inline-block;
 	margin: 15% auto 1% auto;
 }
-@media screen and (min-width: 700px) {
+.brand:hover {
+	cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+	.brand-container span {
+		font-size: 0.7rem;
+	}
 	.brand {
-		max-width: 7rem;
+		max-width: 3rem;
 	}
 }
 
@@ -157,6 +183,7 @@ html {
 		width: 100%;
 		border-radius: 0 0 80px;
 		max-width: 200px;
+		z-index: 9999;
 	}
 }
 
@@ -197,10 +224,10 @@ html {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 99999;
 	top: 0;
 	right: 0;
-	background-color: rgba(17, 17, 17, 0.418);
+	background-color: var(--grayblue3);
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
@@ -315,6 +342,7 @@ html {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin: 5%;
 	}
 	.hero {
 		background: none;
@@ -332,7 +360,7 @@ html {
 		font-size: 4rem;
 		line-height: 3rem;
 		max-width: 65%;
-		margin: 5% 5% 2% auto;
+		margin: 5% 0% 4% auto;
 	}
 	.hero h3 {
 		font-size: 2rem;
@@ -346,7 +374,6 @@ html {
 		max-height: 650px;
 	}
 	.video-container {
-		/* display: block; */
 	}
 	#myVideo {
 		display: block;
@@ -358,27 +385,77 @@ html {
 FORM STYLES */
 
 .register-form {
-	background-color: #f1f1f1;
+	background-color: var(--greyblue2);
+	border: var(--greyblue2);
 }
 
 #form {
 	height: 0;
 	overflow: hidden;
-	transition: 0.5s;
 }
 .register-btn {
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	text-decoration: none;
 	border: 0;
 	text-align: left;
-	padding: 2% 15%;
+	padding: 2% 20%;
 	color: #fff;
 	background-color: var(--yellow1);
 	font-size: 2rem;
 	font-weight: 700;
-	margin-bottom: 5%;
+
+	cursor: pointer;
+}
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	color: #fff;
+
+	margin: 5%;
+}
+#form label {
+	display: block;
+	font-size: 1.2rem;
+	margin: 1%;
+}
+
+@media only screen and (min-width: 700px) {
+	.form-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		color: #fff;
+
+		margin: 5%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.register-form {
+		/* background-image: url(https://img.freepik.com/premium-vector/chaotic-abstract-line-background-random-geometric-line-seamless-pattern_578506-149.jpg?w=1380);
+		; */
+		padding-left: 50%;
+	}
+	.form-container {
+		backdrop-filter: drop-shadow(4px 4px 10px blue);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		color: #fff;
+
+		margin: 2% 20% AUTO 5%;
+	}
+	.register-btn {
+		font-size: 3rem;
+		padding: 0 20%;
+	}
 }
 
 .footer {

@@ -20,7 +20,7 @@ function openForm(){
   
 let form=document.getElementById("form")
 if (flag===false){
-  form.style.height="auto"
+  form.style.height="500px"
   flag=true
 } else if(flag===true){
   form.style.height="0"
