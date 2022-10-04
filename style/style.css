@@ -34,6 +34,14 @@ html {
 	display: none;
 	height: 0;
 }
+main {
+	margin-right: 5%;
+}
+@media screen and (min-width: 700px) {
+	main {
+		margin-right: 3%;
+	}
+}
 /* side stripe styles */
 .side-stripe {
 	z-index: 9999;
@@ -49,26 +57,31 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
 }
 .side-stripe ul a i {
-	font-size: 2rem;
-	margin: 5% auto;
+	font-size: 1rem;
 	color: #fff;
 }
-.hamb-container {
-	font-size: 2rem;
+.side-stripe ul li {
+	margin: 50% auto;
 }
+
 .hamb {
-	margin: 5%;
+	font-size: 2rem;
+	margin: 5% auto;
 	padding: 3%;
-	height: 50%;
 }
 @media screen and (min-width: 700px) {
-	.side-stripe {
+	.hamb {
 		font-size: 3rem;
 	}
+	.side-stripe {
+		font-size: 2rem;
+	}
+
 	.side-stripe ul a i {
-		font-size: 1rem;
+		font-size: 2rem;
 	}
 }
 
@@ -112,6 +125,7 @@ html {
 }
 
 .header-items {
+	z-index: 99999;
 	display: flex;
 	flex-direction: row;
 }
@@ -135,7 +149,7 @@ html {
 	height: 100%;
 	background-color: var(--greyblue2);
 	width: 100%;
-	max-width: calc(9vw);
+	max-width: 80px;
 	position: relative;
 	display: inline-block;
 	margin: 15% auto 1% auto;
@@ -146,6 +160,7 @@ html {
 @media screen and (max-width: 700px) {
 	.brand-container span {
 		font-size: 0.7rem;
+		max-width: 4rem;
 	}
 	.brand {
 		max-width: 3rem;
@@ -153,7 +168,7 @@ html {
 }
 
 .logo-container {
-	max-height: 100px;
+	max-height: 240px;
 	height: 100%;
 }
 
@@ -175,7 +190,7 @@ html {
 	.logo {
 		height: 100%;
 		width: 100%;
-		max-width: 150px;
+		max-width: 130px;
 		background-color: var(--greyblue2);
 	}
 }
@@ -186,7 +201,6 @@ html {
 		width: 100%;
 		border-radius: 0 0 80px;
 		max-width: 200px;
-		z-index: 9999;
 	}
 }
 
@@ -278,7 +292,7 @@ html {
 
 .hero {
 	color: hsl(0, 0%, 95%);
-	padding: 20% 0;
+	padding: 12% 0 20%;
 	background: linear-gradient(var(--transparentD), var(--transparentD)),
 		url("/images/zapatillas-trail-running-race-light-2.jpeg");
 	background-repeat: no-repeat;
@@ -292,7 +306,6 @@ html {
 	font-size: 1.2rem;
 }
 .hero-content {
-	z-index: 1000;
 	padding: 5%;
 }
 
@@ -311,6 +324,7 @@ html {
 	.hero {
 		padding: 0;
 		line-height: 2rem;
+		z-index: -1000;
 	}
 	.hero-content {
 		/* padding: 10% 5%; */
@@ -355,15 +369,15 @@ html {
 	.hero-content {
 		padding: 0%;
 		position: absolute;
-		margin: 3% 3% 20%;
+		margin: 0% 3% 20%;
 	}
 
 	.hero h1 {
 		text-align: right;
 		font-size: 4rem;
 		line-height: 3rem;
-		max-width: 65%;
-		margin: 5% 0% 4% auto;
+		max-width: 60%;
+		margin: 0% 0% 7% auto;
 	}
 	.hero h3 {
 		font-size: 2rem;
@@ -373,7 +387,6 @@ html {
 		font-size: 1.6rem;
 	}
 	.hero-margin {
-		padding: 0 5% 0 0;
 		max-height: 650px;
 	}
 	.video-container {
@@ -390,6 +403,9 @@ FORM STYLES */
 .register-form {
 	background-color: var(--greyblue2);
 	border: var(--greyblue2);
+}
+.register-btn-background {
+	background-color: var(--grayblue3);
 }
 
 #form {
@@ -419,7 +435,8 @@ FORM STYLES */
 
 	color: #fff;
 
-	margin: 5%;
+	margin: 2% 5%;
+	max-height: 600px;
 }
 #form label {
 	display: block;
@@ -435,14 +452,29 @@ FORM STYLES */
 
 		color: #fff;
 
-		margin: 5%;
+		margin: 2%;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 700px) {
+	.register-btn {
+		background: none;
+	}
+	.register-background {
+		border-radius: 40px 0 0 0;
+		background-color: var(--transparentD);
+	}
 	.register-form {
-		/* background-image: url(https://img.freepik.com/premium-vector/chaotic-abstract-line-background-random-geometric-line-seamless-pattern_578506-149.jpg?w=1380);
-		; */
+		background-image: url(https://images.unsplash.com/photo-1551992315-907fbf183932?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80);
+		clip-path: polygon(
+			50% 0%,
+			100% 0,
+			100% 60%,
+			100% 100%,
+			0 100%,
+			0% 60%,
+			10% 20%
+		);
 		padding-left: 50%;
 	}
 	.form-container {
@@ -454,6 +486,9 @@ FORM STYLES */
 		color: #fff;
 
 		margin: 2% 20% AUTO 5%;
+	}
+	.register-btn-background {
+		border-radius: 100px 0 0 100px;
 	}
 	.register-btn {
 		font-size: 3rem;
