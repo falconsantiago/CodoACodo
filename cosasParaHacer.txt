@@ -12,5 +12,8 @@ https://codepen.io/remilaudanski/pen/gbBGyN
 
 -definir contenido de las demas secciones
 
-
+-apis para tener en cuenta:
+ejercicios : https://api-ninjas.com/api/exercises
+clima : https://api-ninjas.com/api/weather
+timezone : https://api-ninjas.com/api/timezone
 
