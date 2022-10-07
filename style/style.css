@@ -501,17 +501,27 @@ FORM STYLES */
 /*footer-style*/
 
 .footer {
-	background-color: aquamarine;
-	padding: auto;
-	margin: 5% auto;
+	background-image: url(/images/BackGroundFooter.jpg); 
+	background-size: 98% 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+.fondo-footer{
+	background-color: var(--grayblue3);
+	opacity: 0.8;
+	background-size: 98% 100%;
 }
 
+
 .nav-footer {
+	
 	font-size: 1rem;
 	align-content: center;
 	display: flex;
 	justify-content: space-evenly;
+	
 }
+
 
 .col-footer{
 	text-align: center;
@@ -519,24 +529,21 @@ FORM STYLES */
 	
 	
 }
-.nav-footer a {
+.nav-footer a, .nav-footer p {
 	padding: 0px 0px 8px 0px;
 	text-decoration: none;
 	font-size: 1rem;
 	transition: 0.3s;
-	color: var(--grayblue3);
+	color: #f1f1f1;
 }
 
 .nav-footer a:hover {
-	color: #f1f1f1;
+	color: var(--yellow1);
 }
+
 
 .nav-footer h6 {
 	padding: 10px 0px 10px 0px;
 	text-decoration:underline ;
-	color: rgb(0, 0, 0);
-	
-	
-	
-	
+	color: #f1f1f1;
 }

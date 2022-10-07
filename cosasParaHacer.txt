@@ -17,3 +17,4 @@ ejercicios : https://api-ninjas.com/api/exercises
 clima : https://api-ninjas.com/api/weather
 timezone : https://api-ninjas.com/api/timezone
 
+-o crear una api de las distintas carreras o circuitos que estan en la página.
