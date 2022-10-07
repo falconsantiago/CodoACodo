@@ -5,8 +5,6 @@ referencia:
  https://ultratrailharricana.com/en/?gclid=CjwKCAjwg5uZBhATEiwAhhRLHsS5UKckSC9F7zsIbiQ_UWOYNqslMT2R-UaxeNLf5mGfGeDlyCS5GRoC5P4QAvD_BwE
 
 
--agregar iconos a la parte de socials (barra lateral)
--agregar estylo y terminar el form
 refe de animacion del form 
 https://codepen.io/remilaudanski/pen/gbBGyN
 
