@@ -60,12 +60,10 @@ main {
 	justify-content: space-around;
 }
 .side-stripe ul a i {
-	
 	font-size: 1.5rem;
 	color: #fff;
 }
 .side-stripe ul li {
-	
 	margin: 50% auto;
 }
 
@@ -480,7 +478,6 @@ FORM STYLES */
 		padding-left: 50%;
 	}
 	.form-container {
-		backdrop-filter: drop-shadow(4px 4px 10px blue);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -498,9 +495,77 @@ FORM STYLES */
 	}
 }
 
+/* data styles */
+
+.data-bkg {
+	background-color: hsla(0, 0%, 100%, 0.8);
+	padding: 3%;
+}
+.data {
+	background-image: url(https://img.freepik.com/premium-vector/topographic-map-background-geographic-line-map-with-elevation-assignments-contour-background-geographic-grid_634443-332.jpg?w=1060);
+}
+.data-container {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.data h2 {
+	font-size: 2rem;
+	margin-bottom: 1%;
+}
+.data p {
+	font-size: 1.4rem;
+	margin-bottom: 1%;
+}
+.data p a {
+	color: var(--greyblue1);
+	margin: 5px 0;
+}
+.data p a:hover {
+	color: var(--neonyellow);
+	transition: 0.3s;
+}
+.iframe-container {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+	.data {
+	}
+	.data-bkg {
+	}
+	.iframe-container {
+		display: inline-block;
+		width: 45%;
+	}
+	.data-border {
+		margin: 0 auto;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.data-container h2 {
+		font-size: 3.2rem;
+	}
+	.data-container p {
+		font-size: 1.8rem;
+	}
+	.iframe-container {
+		display: inline-block;
+		width: 45%;
+	}
+	.data-border {
+		margin: 0 auto;
+		width: 55%;
+		margin: 1%;
+	}
+}
+
 /*footer-style*/
 
 .footer {
+
 	background-image: url(/images/BackGroundFooter.jpg); 
 	background-size: 98% 100%;
 	background-repeat: no-repeat;
@@ -510,6 +575,11 @@ FORM STYLES */
 	background-color: var(--grayblue3);
 	opacity: 0.8;
 	background-size: 98% 100%;
+
+	padding: auto;
+	margin: auto;
+	font-size: 0.5rem;
+
 }
 
 
@@ -519,15 +589,19 @@ FORM STYLES */
 	align-content: center;
 	display: flex;
 	justify-content: space-evenly;
+
 	
 }
 
 
 .col-footer{
+
+	flex-direction: row;
+}
+
+.col-footer {
+
 	text-align: center;
-	
-	
-	
 }
 .nav-footer a, .nav-footer p {
 	padding: 0px 0px 8px 0px;
@@ -544,6 +618,18 @@ FORM STYLES */
 
 .nav-footer h6 {
 	padding: 10px 0px 10px 0px;
+
 	text-decoration:underline ;
 	color: #f1f1f1;
 }
+
+	text-decoration: underline;
+	color: rgb(0, 0, 0);
+}
+
+/* @media screen and (min-width: 500px) {
+	.nav-footer {
+		flex-direction: row;
+	}
+} */
+
