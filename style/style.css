@@ -566,9 +566,10 @@ FORM STYLES */
 
 .footer {
 	background-image: url(/images/BackGroundFooter.jpg);
-	background-size: 98% 100%;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
+	margin-right: 2%;
 }
 .fondo-footer {
 	background-color: var(--grayblue3);
@@ -604,6 +605,11 @@ FORM STYLES */
 	color: #f1f1f1;
 }
 
+.col-footer-cont {
+	display: flex;
+	flex-direction: column;
+}
+
 .nav-footer a:hover {
 	color: var(--yellow1);
 }
@@ -619,6 +625,20 @@ FORM STYLES */
 
 @media screen and (min-width: 500px) {
 	.nav-footer {
+		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.col-footer {
+		width: 40%;
+	}
+}
+@media screen and (min-width: 900px) {
+	.nav-footer {
+		align-items: baseline;
+		flex-wrap: nowrap;
+	}
+	.col-footer {
+		/* flex-basis: min-content; */
 	}
 }
