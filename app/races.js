@@ -1,6 +1,7 @@
 var races= [
     {
     "id": 1,
+    "image": "images/image-uth125",
     "race": "UTHC 125",
     "presenter": "The North Face",
     "start": "Friday 13:00",
