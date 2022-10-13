@@ -428,6 +428,11 @@ FORM STYLES */
 
 	cursor: pointer;
 }
+
+.register-btn:hover {
+	color: var(--neonyellow);
+	transition: 0.3s ease-in-out;
+}
 .form-container {
 	display: flex;
 	flex-direction: column;
@@ -437,6 +442,18 @@ FORM STYLES */
 
 	margin: 2% 5%;
 	max-height: 600px;
+}
+.form-container button {
+	margin-top: 15px;
+	color: #fff;
+	background-color: #000;
+	border-radius: 100px;
+	border: none;
+	font-weight: 700;
+}
+.form-container input[type="radio"] {
+	width: 20px;
+	height: 20px;
 }
 #form label {
 	display: block;

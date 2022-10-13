@@ -1,63 +1,50 @@
-<div>
-	<h1>Run like a wolf and free your wild</h1>
-	<div>
-		<h3><strong>ULTRA-TRAIL HARRICANA OF CANADA</strong><strong>™</strong></h3>
-		<h3>
-			Friday, Saturday and Sunday<strong> – September 8-9-10 2023</strong><br />
-			Mont Grand-Fonds Ski Resort in La&nbsp;Malbaie, Quebec
-		</h3>
-		<p>
-			<a>
-				href="https://www.eventbrite.ca/e/2023-ultra-trail-harricanatm-presented-by-the-north-face-registration-398203737097?_eboga=997720949.1662132990"
-				><i class="fas fa-bolt"></i> 2023 registrations open!</a
-			>
-		</p>
-		<p>
-			<a class="cta cta-main" href="https://harricana.run/resultats2022"
-				><i class="fas fa-award"></i> Race results Sportstats</a
-			>
-		</p>
-		<p>
-			An authentic trail running experience in Canada’s wild backcountry. Trails
-			dense with rugged nature and wildlife. A rich ecosystem in a unique UNESCO
-			world biosphere reserve. Summits where the wind carries the scents of the
-			St. Lawrence River and the boreal forest.
-		</p>
-		<p>
-			What can you expect at Ultra-Trail Harricana du Canada™? To run like a
-			wolf and free your wild!
-		</p>
-		<p>
-			<strong
-				><a href="https://ultratrailharricana.com/en/rules-policies/"
-					>Worried about COVID? Read our refund Policy&nbsp;</a
-				></strong
-			>
-		</p>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="data-container">
-	<div class="data">
-		<h2>Headliners</h2>
-		<p>
-			The Ultra-Trail Harricana du Canada™ is an international-caliber
-			trail-running event attended by a largest pool of elite runners who want
-			to challenge themselves. Over the years, the trails have been run by
-			athletes from all Canadian provinces and more than 30 countries.&nbsp;
-		</p>
-		<p>
-			<a
-				class=""
-				href="https://ultratrailharricana.comen/welcoming-program/?_ga=2.51517039.715911214.1638565067-358479441.1638565067"
-				>Discover our Welcoming Program for star athletes</a
-			>
-		</p>
-		<p>
-			<a class="" href="https://debugultratrailharricana.com/en/headliners/"
-				>See all elite runners</a
-			>
-		</p>
-	</div>
-	<div class=""></div>
-</div>
+		<link rel="stylesheet" href="/style//reset.css" />
+		<link rel="stylesheet" href="/style/style.css" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="test.css" />
+	</head>
+	<body>
+		<section class="training">
+			<div class="training-margin">
+				<div class="training-options">
+					<button class="training-btn" onclick="routine('LONG')">LONG</button>
+					<button class="training-btn" onclick="routine('MID')">MID</button>
+					<button class="training-btn" onclick="routine('SHORT')">SHORT</button>
+				</div>
+				<div class="race-description">
+					<!-- esto es maqueta nomas -->
+					<h1 class="raceName">${races[id].race}</h1>
+					<h3 class="raceDistance">${races[id].distance}</h3>
+					<span class="raceElevation">${races[id].distance}</span>
+					<span class="raceCourse">${races[id].course}</span>
+					<span class="raceStations">${races[id].stations}</span>
+				</div>
+				<div class="routine-card" id="routineCard">
+					<h1>Some excercises for this race!</h1>
+					<h3>${result[0].name}</h3>
+					<span>${result[0].muscle}</span>
+					<span id="span">${result[0].equipment}</span>
+					<p>${result[0].instructions}</p>
+
+					<button onclick="createRoutine()">asdasd</button>
+				</div>
+			</div>
+
+			<script
+				src="https://code.jquery.com/jquery-3.6.1.js"
+				integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+				crossorigin="anonymous"
+			></script>
+			<script src="/app/index.js"></script>
+			<script src="/app/races.js"></script>
+		</section>
+	</body>
+</html>

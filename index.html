@@ -130,6 +130,19 @@
 				</video>
 			</section>
 			<div class="section-divisor"></div>
+
+			<section class="training">
+				<div class="training-margin">
+					<div class="training-options">
+						<button class="training-btn" onclick="routine('LONG')">LONG</button>
+						<button class="training-btn" onclick="routine('MID')">MID</button>
+						<button class="training-btn" onclick="routine('SHORT')">
+							SHORT
+						</button>
+					</div>
+					<div class="training-routine"></div>
+				</div>
+			</section>
 			<section class="register-form">
 				<div class="register-btn-background">
 					<button class="register-btn" id="registerBtn" onclick="openForm()">
@@ -159,12 +172,14 @@
 							<div>
 								<label> Distance </label>
 								<select>
-									<option value="BCA">BCA</option>
-									<option value="BBA">BBA</option>
-									<option value="B.Tech">B.Tech</option>
-									<option value="MBA">MBA</option>
-									<option value="MCA">MCA</option>
-									<option value="M.Tech">M.Tech</option>
+									<option value="UTHC 125">UTHC 125</option>
+									<option value="UTCH 80">UTCH 80</option>
+									<option value="UTHC 65">UTHC 65</option>
+									<option value="UTCH 42">UTCH 42</option>
+									<option value="Trail 28km">Trail 28km</option>
+									<option value="Trail 20km">Trail 20km</option>
+									<option value="Trail 10km">Trail 10km</option>
+									<option value="Trail 5km">Trail 5km</option>
 								</select>
 							</div>
 							<div>
@@ -172,7 +187,6 @@
 								<input type="radio" value="Male" name="gender" checked />
 								Male
 								<input type="radio" value="Female" name="gender" /> Female
-								<input type="radio" value="Other" name="gender" /> Other
 							</div>
 
 							<label for="email"><b>Email</b></label>
@@ -238,9 +252,8 @@
 			</section>
 
 			<footer class="footer">
-				<div class="fondo-footer">
+				<main class="fondo-footer">
 					<div class="nav-footer">
-						
 						<div class="col-footer">
 							<h6>Races</h6>
 							<ul>
@@ -314,6 +327,10 @@
 					<div class="banner">
 						<img src="" alt="" />
 					</div>
+					<!-- 				
+			</footer>
+		</main> -->
+
 					<!-- <div class="credits">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
 						excepturi modi nisi et eaque maiores temporibus mollitia illo
@@ -398,10 +415,15 @@
 				<div class="banner"></div>
 				<div class="credits"></div>
 				<div class="mapouter"></div> -->
-				</footer>
-			
+				</main>
+			</footer>
 		</main>
-
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.js"
+			integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+			crossorigin="anonymous"
+		></script>
 		<script src="/app/index.js"></script>
+		<script src="/app/races.js"></script>
 	</body>
 </html>
