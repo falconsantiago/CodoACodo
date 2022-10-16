@@ -61,11 +61,24 @@ var races = [
 	},
 ];
 
-races.forEach((e) => {
-	let distNum = parseInt(e.Distance);
-	if (distNum > 63) {
-		return e.id;
-	} else if (distNum < 63 && distNum > 43) {
-		return e.id;
-	}
-});
+// races.forEach((e) => {
+// 	let distNum = parseInt(e.Distance);
+// 	if (distNum > 63) {
+// 		return e.id;
+// 	} else if (distNum < 63 && distNum > 43) {
+// 		return e.id;
+// 	}
+// });
+
+function raceSelec(i) {
+	let markup = `
+					<h1 class="raceName">${races[i].race}</h1>
+					<h3 class="raceDistance">${races[i].Distance}</h3>
+					<span class="raceElevation">${races[i].Elevation}</span>
+					<span class="raceCourse">${races[i].Course}</span>
+					<span class="raceStations">${races[i].Stations}</span>`;
+
+	return (document.getElementById("race-description").innerHTML = markup);
+}
+
+raceSelec(0);

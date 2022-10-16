@@ -134,13 +134,49 @@
 			<section class="training">
 				<div class="training-margin">
 					<div class="training-options">
-						<button class="training-btn" onclick="routine('LONG')">LONG</button>
-						<button class="training-btn" onclick="routine('MID')">MID</button>
-						<button class="training-btn" onclick="routine('SHORT')">
-							SHORT
+						<h1>Races</h1>
+					</div>
+
+					<div class="race-btns">
+						<button
+							class="racebtn"
+							onclick="raceSelec(0),apiCall('intermediate') "
+						>
+							UTHC 125
+						</button>
+						<button
+							class="racebtn"
+							onclick="raceSelec(1),apiCall('intermediate')"
+						>
+							UTHC 80
+						</button>
+						<button
+							class="racebtn"
+							onclick="raceSelec(2),apiCall('intermediate')"
+						>
+							UTHC 65
+						</button>
+						<button class="racebtn" onclick="raceSelec(3),apiCall('beginner')">
+							UTHC 42
+						</button>
+						<button class="racebtn" onclick="raceSelec(4),apiCall('beginner')">
+							Trail 28 km
 						</button>
 					</div>
-					<div class="training-routine"></div>
+					<div id="race-description">
+						<!-- <h1 class="raceName">${races[id].race}</h1>
+					<h3 class="raceDistance">${races[id].distance}</h3>
+					<span class="raceElevation">${races[id].distance}</span>
+					<span class="raceCourse">${races[id].course}</span>
+					<span class="raceStations">${races[id].stations}</span> -->
+					</div>
+					<div class="routine-card" id="routineCard">
+						<!-- <h1>Some excercises for this race!</h1>
+					<h3>${result[0].name}</h3>
+					<span>${result[0].muscle}</span>
+					<span id="span">${result[0].equipment}</span>
+					<p>${result[0].instructions}</p> -->
+					</div>
 				</div>
 			</section>
 			<section class="register-form">

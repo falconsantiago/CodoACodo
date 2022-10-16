@@ -38,9 +38,19 @@ function apiCall(difficulty) {
 				difficulty,
 			headers: { "X-Api-Key": apiKey },
 			contentType: "application/json",
-			success: function (result) {
+			success: async function (result) {
 				console.log(result);
-				return (beginnerRes = result[2]);
+				let beginnerRes = result[Math.floor(Math.random() * 9)]; //asdasd
+
+				let markup = `
+  				<div class="routine-card" id="routineCard">
+  					<h1>Some excercises for this race!</h1>
+  					<h3>${beginnerRes.name}</h3>
+  					<span>${beginnerRes.muscle}</span>
+ 				<span>${beginnerRes.equipment}</span>
+ 				<p>${beginnerRes.instructions}</p>
+ 			</div>`;
+				return (document.getElementById("routineCard").innerHTML = markup);
 			},
 			error: function ajaxError(jqXHR) {
 				console.error("Error: ", jqXHR.responseText);
@@ -57,7 +67,20 @@ function apiCall(difficulty) {
 			contentType: "application/json",
 			success: function (result) {
 				console.log(result);
-				return (intermediateRes = result[2]);
+				let intermediateRes = result[Math.floor(Math.random() * 10)]; //asdasd
+
+				let markup = `
+  				<div class="routine-card" id="routineCard">
+  					<h1>Some excercises for this race!</h1>
+  					<h3>${intermediateRes.name}</h3>
+  					<span>${intermediateRes.muscle}</span>
+ 				<span>${intermediateRes.equipment}</span>
+ 				<p>${intermediateRes.instructions}</p>
+ 			</div>`;
+				return (document.getElementById("routineCard").innerHTML = markup);
+			},
+			error: function ajaxError(jqXHR) {
+				console.error("Error: ", jqXHR.responseText);
 			},
 			error: function ajaxError(jqXHR) {
 				console.error("Error: ", jqXHR.responseText);
@@ -66,29 +89,13 @@ function apiCall(difficulty) {
 	}
 }
 
-// let beginnerRes = apiCall("beginner")[2];
 apiCall("beginner");
 apiCall("intermediate");
-// apiCall("expert");
-
-let markup = `
-  				<div class="routine-card" id="routineCard">
-  					<h1>Some excercises for this race!</h1>
-  					<h3>${beginnerRes.name}</h3>
-  					<span>${beginnerRes.muscle}</span>
- 				<span>${beginnerRes.equipment}</span>
- 				<p>${beginnerRes.instructions}</p>
- 			</div>`;
 
 function routine(e) {
 	if (e === "SHORT") {
 		console.log(beginnerRes);
-	} else if (e === "MID") {
-		console.log(intermediateRes);
 	} else {
-		console.log("expert");
+		console.log(intermediateRes);
 	}
 }
-//el expert no tiene data
-
-document.body.innerHTML = "";
