@@ -397,8 +397,105 @@ main {
 	}
 }
 /*TRAINING BUTTON STYLES*/
+.training{
+width: 97.782%;
 
-.raceName{
+
+	
+}
+
+.training-options , .race-btns{
+	background-color: var(--greyblue1);
+	
+
+}
+#race-btn{
+	padding: 10px;
+	text-align-last: center;
+	color:  var(--yellow1);
+}
+.race-btns{
+	display: flex;
+	justify-content:space-around;
+	
+}
+
+.race-btns > button {
+  align-items: center;
+  background-color: var(--grayblue3);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  vertical-align: middle;
+ 
+}
+
+.race-btns > button:hover,
+.race-btns > button:focus { 
+  background-color: var(--yellow1);
+  color: #ffffff;
+}
+
+.race-btns > button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.race-btns > button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: c1f1; }
+.item3 { grid-area: c2f1; }
+.item4 { grid-area: c3f1; }
+.item5 { grid-area: c4f1; }
+.item6 { grid-area: c5f1; }
+.item7 { grid-area: c6f1; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'c1f1 c2f1 c3f1 c4f1 c5f1 c6f1';
+  row-gap: 10px;
+  column-gap: 10px;
+  background-color: var(--greyblue1);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: var(--grayblue3);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.grid-container > div > p{
+	color: #cfd466;
+}
+
+/*.raceName{
 	background-color: var(--greyblue1);
 	color: #cfd466;
 	display: flex;
@@ -413,8 +510,8 @@ main {
 	align-items: center;
 	
 
-	/*justify-content:space-evenly;*/
-}
+	/*justify-content:space-evenly;
+}*/
 
 
 
@@ -625,6 +722,7 @@ FORM STYLES */
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
+	margin-right: 5%;
 }
 
 .col-footer {
