@@ -396,6 +396,27 @@ main {
 		height: 100%;
 	}
 }
+/*TRAINING BUTTON STYLES*/
+
+.raceName{
+	background-color: var(--greyblue1);
+	color: #cfd466;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+.training{
+	background-color: #669999;
+}
+.race-btns{
+	padding-inline-start: 1%;
+	align-items: center;
+	
+
+	/*justify-content:space-evenly;*/
+}
+
+
 
 /* 
 FORM STYLES */

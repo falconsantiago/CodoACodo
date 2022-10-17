@@ -12,7 +12,7 @@ function closeNav() {
 
 // let vid = document.getElementById("myVideo");
 // vid.playbackRate = 0.75;
-// let flag = false;
+let flag = false;
 
 function openForm() {
 	let form = document.getElementById("form");
@@ -44,7 +44,7 @@ function apiCall(difficulty) {
 
 				let markup = `
   				<div class="routine-card" id="routineCard">
-  					<h1>Some excercises for this race!</h1>
+  					<h1>Some excercises for this race! </h1>
   					<h3>${beginnerRes.name}</h3>
   					<span>${beginnerRes.muscle}</span>
  				<span>${beginnerRes.equipment}</span>
