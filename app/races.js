@@ -72,6 +72,20 @@ var races = [
 
 function raceSelec(i) {
 	let markup = `
+	
+	<div class="grid-container">
+	  <div class="item1">${races[i].race}</div>
+	  <div class="item2"><h3>${races[i].Distance}</h3> <br><p> distancia</p></div>
+	  <div class="item3">c2</div>  
+	  <div class="item4">c3</div>
+	  <div class="item5">c4</div>
+	  <div class="item6">c5</div>
+	  <div class="item7">c6</div>
+	
+	
+	</div>
+	
+
 					<h1 class="raceName">${races[i].race}</h1>
 					<h3 class="raceDistance">${races[i].Distance}</h3>
 					<span class="raceElevation">${races[i].Elevation}</span>
